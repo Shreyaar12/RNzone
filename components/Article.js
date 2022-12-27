@@ -15,9 +15,26 @@ const Article = ()=> {
   <Text style={styles.title}> News
     Article
   </Text>
-  
+  {/* description */}
+  <Text style={styles.description}>
+  Lorem ipsum dolor sit amet, consectetur
+  Lorem ipsum dolor sit amet, consectetur
+  Lorem ipsum dolor sit amet, consectetur
+  Lorem ipsum dolor sit amet, consectetur
+  </Text>
+  {/* data */}
+  <View style={styles.data}>
+    <Text style={styles.heading}>
+        by: <Text style={styles.author}>
+            Shreya Rajpal
+        </Text>
+    </Text>
+    <Text style={styles.date}> Aug 9th 22</Text>
+  </View>
+
       <StatusBar style="auto" />
       </SafeAreaView>)
+
 
 }
 
@@ -40,7 +57,27 @@ const styles = StyleSheet.create({
   },
   title:{
     fontSize:18,
-    fontWeight:"bold",
+    fontWeight:"600",
     marginTop:10
+  },
+  description:{
+    fontSize:16,
+    fontWeight:"400",
+    marginTop:10
+  },
+  data:{
+   flexDirection: "row",
+   justifyContent:"space-between",
+   marginTop:10
+  },
+  date:{ 
+   fontWeight:"bold",
+  },
+  heading:{
+  
+  },
+  author:{
+    fontWeight:"bold",
   }
+
 });
