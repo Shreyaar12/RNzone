@@ -32,8 +32,13 @@ const Article = ()=> {
     <Text style={styles.date}> Aug 9th 22</Text>
   </View>
 
+{/* Source */}
+<View style={{marginTop:10}}>
+<Text style={styles.source}> Hindustan Times</Text>
+</View>
       <StatusBar style="auto" />
       </SafeAreaView>)
+      
 
 
 }
@@ -72,12 +77,22 @@ const styles = StyleSheet.create({
   },
   date:{ 
    fontWeight:"bold",
+   color:"red",
+   fontSize: 15
   },
   heading:{
   
   },
   author:{
     fontWeight:"bold",
+
+  },
+  source:{
+
+color:"red",
+fontWeight:"bold",
+fontSize: 15
+
   }
 
 });
