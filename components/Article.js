@@ -11,7 +11,7 @@ const Article = ()=> {
         }}
         style={styles.image}/>
         {/* title */}
-
+<View style={{padding: 20}}>
   <Text style={styles.title}> News
     Article
   </Text>
@@ -36,6 +36,7 @@ const Article = ()=> {
 <View style={{marginTop:10}}>
 <Text style={styles.source}> Hindustan Times</Text>
 </View>
+</View>
       <StatusBar style="auto" />
       </SafeAreaView>)
       
@@ -50,6 +51,14 @@ const styles = StyleSheet.create({
   container: {
     width:"90%",
     alignSelf:"center",
+    borderRadius:20,
+    shadowOpacity:0.5,
+    shadowColor:"#000",
+    shadowOffset:{
+        height:5,
+        width:5
+    },
+
 
     flex: 1,
     backgroundColor: "#fff",
@@ -58,7 +67,9 @@ const styles = StyleSheet.create({
   },
   image:{
     height:200,
-    width: "100%"
+    width: "100%",
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40
   },
   title:{
     fontSize:18,
