@@ -1,27 +1,21 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Alert, Button, Text, View } from "react-native";
+import { StyleSheet, Alert, Button, Text, SafeAreaView } from "react-native";
+import Article from "./components/Article";
 
-export default function App() {
+const HomeScreen = ()=> {
   return (
-    <View style={styles.container}>
-      <Text
-        style={{
-          margin: 20,
-          borderWidth: 2,
-          borderColor: "black",
-          padding: 10,
-        }}
-      >
-        Hello world
-      </Text>
-      <Button
-        title="Press me"
-        onPress={() => Alert.alert("Simple Button pressed")}
-      />
+    <SafeAreaView style={styles.container}>
+      <Article />
+  <Text>
+Ha bhai ghar ki screen
+  </Text>
       <StatusBar style="auto" />
-    </View>
-  );
+      </SafeAreaView>)
+
 }
+
+export default HomeScreen;
+
 
 const styles = StyleSheet.create({
   container: {
