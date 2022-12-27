@@ -10,9 +10,12 @@ const Article = ()=> {
             url:"../images/thisisengineering.jpg"
         }}
         style={styles.image}/>
-  <Text>
+        {/* title */}
+
+  <Text style={styles.title}> News
     Article
   </Text>
+  
       <StatusBar style="auto" />
       </SafeAreaView>)
 
@@ -34,5 +37,10 @@ const styles = StyleSheet.create({
   image:{
     height:200,
     width: "100%"
+  },
+  title:{
+    fontSize:18,
+    fontWeight:"bold",
+    marginTop:10
   }
 });
