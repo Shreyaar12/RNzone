@@ -8,37 +8,38 @@ import {
   Text,
   SafeAreaView,
 } from "react-native";
+import moment from "moment";
 
-const Article = () => {
+const Article = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       {/* image */}
       <Image
         source={{
-          url: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          url: props.urlToImage,
         }}
         style={styles.image}
       />
       {/* title */}
       <View style={{ padding: 20 }}>
-        <Text style={styles.title}> News Article</Text>
+        <Text style={styles.title}> {props.title}</Text>
         {/* description */}
-        <Text style={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet,
-          consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor
-          sit amet, consectetur
+        <Text style={styles.description} numberOfLines={3}>
+          {props.description}
         </Text>
         {/* data */}
         <View style={styles.data}>
           <Text style={styles.heading}>
-            by: <Text style={styles.author}>Shreya Rajpal</Text>
+            by: <Text style={styles.author}>{props.author}</Text>
           </Text>
-          <Text style={styles.date}> Aug 9th 22</Text>
+          <Text style={styles.date}>
+            {moment(props.publishedAt).format("MMM Do YY")}
+          </Text>
         </View>
 
         {/* Source */}
         <View style={{ marginTop: 10 }}>
-          <Text style={styles.source}> Hindustan Times</Text>
+          <Text style={styles.source}> {props.sourceName}</Text>
         </View>
       </View>
       <StatusBar style="auto" />
