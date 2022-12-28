@@ -17,7 +17,7 @@ const SearchBar=(props)=>{
         </View>
     )
 }
-export default SearchScreen;
+export default SearchBar;
 const styles= StyleSheet.create({
     container: {
 
