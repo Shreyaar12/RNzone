@@ -4,9 +4,9 @@ import Article from "./components/Article";
 import HomeScreen from "./screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import SearchScreen from "./components/SearchScreen";
+import SearchScreen from "./screens/SearchScreen";
 import { Entypo } from "@expo/vector-icons";
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 const App = () => {
@@ -24,10 +24,15 @@ const App = () => {
             tabBarIcon: () => <Entypo name="home" size={24} color="black" />,
           }}
         />
-        <Tab.Screen name="Search" component={SearchScreen}
-        options={{
-          tabBarIcon:()=><FontAwesome name="search" size={24} color="black" />
-        }} />
+        <Tab.Screen
+          name="Search"
+          component={SearchScreen}
+          options={{
+            tabBarIcon: () => (
+              <FontAwesome name="search" size={24} color="black" />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
