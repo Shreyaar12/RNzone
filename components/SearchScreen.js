@@ -9,3 +9,4 @@ const SearchScreen = () => {
     </View>
   );
 };
+export default SearchScreen;
