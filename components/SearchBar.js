@@ -1,13 +1,18 @@
-import {View, TextInput} from "react-native";
+import {View, TextInput, StyleSheet} from "react-native";
 import react from "react";
 import SearchScreen from "../screens/SearchScreen";
 
-const SearchBar=()=>{
+const SearchBar=(props)=>{
     return (
         <View>
             <TextInput
             placeholder="Search"
-            style={styles.input}/>
+            style={styles.input}
+            value={props.searchText}
+            onChangeText={(text)=>props.setSearchText(text)}
+
+            
+            />
 
         </View>
     )
