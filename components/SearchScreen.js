@@ -5,7 +5,7 @@ import HomeScreen from "../screens/HomeScreen";
 const SearchScreen = () => {
   return (
     <View>
-      <Text>Search Screen </Text>{" "}
+      <Text>Search Screen </Text>
     </View>
   );
 };
