@@ -10,8 +10,8 @@ const SearchBar=(props)=>{
             style={styles.input}
             value={props.searchText}
             onChangeText={(text)=>props.setSearchText(text)}
-
-            
+           
+             onSubmitEditing={props.onSubmit}
             />
 
         </View>

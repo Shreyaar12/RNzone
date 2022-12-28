@@ -32,7 +32,11 @@ const SearchScreen = () => {
   };
   return (
     <View style={styles.container}>
-      <SearchBar searchText={searchText} setSearchText={setSearchText} />
+      <SearchBar searchText={searchText} setSearchText={setSearchText} 
+      onSubmit={searchArticles}
+      
+      
+      />
       {/* display articles */}
       <FlatList
       data={articles}
