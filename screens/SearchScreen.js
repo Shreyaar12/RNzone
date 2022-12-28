@@ -1,7 +1,9 @@
 import react, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import HomeScreen from "./HomeScreen";
 import SearchBar from "../components/SearchBar";
+import axios from "axios";
+import Article from "../components/Article";
 
 const SearchScreen = () => {
   const [searchText, setSearchText] = useState("");
@@ -32,25 +34,27 @@ const SearchScreen = () => {
   };
   return (
     <View style={styles.container}>
-      <SearchBar searchText={searchText} setSearchText={setSearchText} 
-      onSubmit={searchArticles}
-      
-      
+      <SearchBar
+        searchText={searchText}
+        setSearchText={setSearchText}
+        onSubmit={searchArticles}
       />
       {/* display articles */}
       <FlatList
-      data={articles}
-      renderItem={({item})=> <Article
-      urlToImage={item.urlToImage}
-      title={item.title}
-      description={item.description}
-      author={item.author}
-      publishedAt={item.publishedAt}
-      sourceName={item.source.name}
-      url={item.url}
-    />}
-    keyExtractor={(item)=>item.title}/>
-
+        data={articles}
+        renderItem={({ item }) => 
+          <Article
+            urlToImage={item.urlToImage}
+            title={item.title}
+            description={item.description}
+            author={item.author}
+            publishedAt={item.publishedAt}
+            sourceName={item.source.name}
+           
+          />
+        }
+        keyExtractor={(item) => item.title}
+      />
     </View>
   );
 };
@@ -59,6 +63,6 @@ export default SearchScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "grey",
+    backgroundColor: "white",
   },
 });

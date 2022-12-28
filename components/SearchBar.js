@@ -1,6 +1,6 @@
-import {View, TextInput, StyleSheet} from "react-native";
+import {View, TextInput,Text, StyleSheet} from "react-native";
 import react from "react";
-import SearchScreen from "../screens/SearchScreen";
+
 
 const SearchBar=(props)=>{
     return (
