@@ -1,13 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  View,
-  Alert,
-  Button,
-  Image,
-  Text,
-  Pressable,
-} from "react-native";
+import { StyleSheet, View, Image, Text, Pressable } from "react-native";
 import moment from "moment";
 import * as WebBrowser from "expo-web-browser";
 

@@ -1,9 +1,8 @@
 import react, { useState } from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
-import HomeScreen from "./HomeScreen";
 import SearchBar from "../components/SearchBar";
-import axios from "axios";
 import Article from "../components/Article";
+import axios from "axios";
 
 const SearchScreen = () => {
   const [searchText, setSearchText] = useState("");
@@ -42,7 +41,7 @@ const SearchScreen = () => {
       {/* display articles */}
       <FlatList
         data={articles}
-        renderItem={({ item }) => 
+        renderItem={({ item }) => (
           <Article
             urlToImage={item.urlToImage}
             title={item.title}
@@ -50,9 +49,8 @@ const SearchScreen = () => {
             author={item.author}
             publishedAt={item.publishedAt}
             sourceName={item.source.name}
-           
           />
-        }
+        )}
         keyExtractor={(item) => item.title}
       />
     </View>
